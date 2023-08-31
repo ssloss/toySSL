@@ -25,8 +25,13 @@ def handle_client(conn):
         print('Client certificate OU is not allowed')
         return
     print('Client certificate OU is allowed')
-    # Handle the client connection here
-    # ...
+
+    # Toy echo server just for demonstration purposes
+    while True:
+        data = conn.recv(1024).decode('utf-8')
+        if not data:
+            break
+        print(f"Received from client: {data}")
 
 def start_server():
     with socket.socket() as s:

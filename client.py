@@ -22,9 +22,12 @@ def connect_to_server():
             # Perform additional checks on server_cert if needed
             
             print(f"Connected to server: {server_cert['subject']}")
-            # Add your client logic here
-            # ...
 
-
+            # Toy echo client just for demonstration purposes
+            while True:
+                msg = input("Enter a message to send to server (type 'exit' to quit): ")
+                ssl_sock.sendall(msg.encode('utf-8'))
+                if msg.lower() == 'exit':
+                    break
 if __name__ == "__main__":
     connect_to_server()
