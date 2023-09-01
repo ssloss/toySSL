@@ -1,3 +1,6 @@
+"""
+Toy example of a server that requires a client certificate and filters clients based on the OU of their certificate while teaching myself about SSL/TLS. The client is in client.py.
+"""
 import ssl
 import socket
 

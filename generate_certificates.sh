@@ -10,7 +10,9 @@ openssl genpkey -algorithm RSA -out ca.key
 # Create self-signed root CA certificate
 openssl req -new -x509 -key ca.key -out ca.crt -subj "/CN=Root CA/O=My Organization/C=US"
 
-# Create Server Certificate
+##############################
+# Create Server Certificate  #
+##############################
 
 # Generate private key for the server
 openssl genpkey -algorithm RSA -out server.key
