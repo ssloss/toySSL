@@ -1,4 +1,4 @@
-Readme
+# What is this?
 
 Toy example of a server that requires a client certificate and filters clients based on the OU of their certificate while teaching myself about SSL/TLS. 
 
